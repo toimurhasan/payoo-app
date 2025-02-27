@@ -29,28 +29,34 @@
           <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
 
           <div class="cards grid grid-cols-3 mt-10 gap-2">
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
+            <div
+              id="add-money-select"
+              class="cursor-pointer hover:bg-slate-100 transition hover:border-slate-400 box border p-4 text-center rounded-md border-gray-500"
+            >
               <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
               <h3 class="text-sm mt-2">Add Money</h3>
             </div>
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
+            <div
+              id="cashout-select"
+              class="cursor-pointer hover:bg-slate-100 transition hover:border-slate-400 box border p-4 text-center rounded-md border-gray-500"
+            >
+              <img class="w-8 mx-auto" src="assets/purse1.png" alt="" />
+              <h3 class="text-sm mt-2">Cash Out</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-md border-gray-500">
+              <img class="w-8 mx-auto" src="assets/send1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-md border-gray-500">
+              <img class="w-8 mx-auto" src="assets/transaction1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-md border-gray-500">
               <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
               <h3 class="text-sm mt-2">Add Money</h3>
             </div>
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
-              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-sm mt-2">Add Money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
-              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-sm mt-2">Add Money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
-              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-sm mt-2">Add Money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm border-gray-500">
-              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+            <div class="box border p-4 text-center rounded-md border-gray-500">
+              <img class="w-8 mx-auto" src="assets/Group.png" alt="" />
               <h3 class="text-sm mt-2">Add Money</h3>
             </div>
           </div>
@@ -59,7 +65,7 @@
       <div class="">
         <div class="flex-col lg:flex-row-reverse">
           <div>
-            <form class="card-body">
+            <form id="add-money-section" class="card-body">
               <select class="select w-full">
                 <option disabled selected>Select Your Bank</option>
                 <option value="bkash">Bkash</option>
@@ -101,10 +107,45 @@
                 <button id="add-money" class="btn btn-accent">Add Money</button>
               </div>
             </form>
+            <form id="cashout" class="hidden card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Agent Number</span>
+                </label>
+                <input
+                  value="01700000000"
+                  id="account-number"
+                  type="number"
+                  placeholder="Type your account number"
+                  class="input input-bordered"
+                  required
+                />
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input
+                  id="amount"
+                  type="number"
+                  placeholder="Type your amount"
+                  class="input input-bordered"
+                />
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input id="pin" type="text" placeholder="enter PIN" class="input input-bordered" />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="cashout-btn" class="btn btn-error">Cash Out</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
     <script src="addMoney.js"></script>
+    <script src="cashout.js"></script>
   </body>
 </html>
