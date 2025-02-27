@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>Yess</h1>
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200 rounded-md">
+      <header>
+        <nav class="flex justify-around items-center">
+          <div class="flex items-center gap-2">
+            <img class="w-16" src="assets/Group.png" alt="" />
+            <div class="space-y-2">
+              <h1 class="text-3xl font-bold">$ <span id="temp-amount">4500</span></h1>
+              <p class="border px-1 rounded border-yellow-600">available balance</p>
+            </div>
+          </div>
+          <button class="btn">Logout</button>
+        </nav>
+        <section class="mt-10 px-4">
+          <h1 class="text-2xl font-bold mb-2">Welcome to Payoo</h1>
+          <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+
+          <div class="cards grid grid-cols-3 mt-10 gap-2">
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+            <div class="box border p-4 text-center rounded-sm border-gray-500">
+              <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+              <h3 class="text-sm mt-2">Add Money</h3>
+            </div>
+          </div>
+        </section>
+      </header>
+      <div class="">
+        <div class="flex-col lg:flex-row-reverse">
+          <div>
+            <form class="card-body">
+              <select class="select w-full">
+                <option disabled selected>Select Your Bank</option>
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagad</option>
+                <option value="upay">Upay</option>
+                <option value="roket">Roket</option>
+                <option value="islami">Islami Bank</option>
+              </select>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Account Number</span>
+                </label>
+                <input
+                  value="01700000000"
+                  id="account-number"
+                  type="number"
+                  placeholder="Type your account number"
+                  class="input input-bordered"
+                  required
+                />
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input
+                  id="amount"
+                  type="number"
+                  placeholder="Type your amount"
+                  class="input input-bordered"
+                />
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input id="pin" type="text" placeholder="enter PIN" class="input input-bordered" />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money" class="btn btn-accent">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="addMoney.js"></script>
   </body>
 </html>
